@@ -53,12 +53,7 @@ class MaxHeap(Generic[T]):
 
         It will return None is the ehap is empty.
         """
-        if self.size() == 0:
-            return None
-
-        root_value = self._remove_item_at_index(0)
-
-        return root_value
+        return None if self.size() == 0 else self._remove_item_at_index(0)
 
     def remove(self, item: T) -> Optional[T]:
         """Removes the specified item from the heap.

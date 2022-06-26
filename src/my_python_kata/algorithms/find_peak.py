@@ -15,9 +15,7 @@ def find_peak_1d(array: List[int]) -> Optional[int]:
     By definition, an array "a" contains a peak only if, for a given element
     at position "i", we have that a[i] >= a[i-1] and a[i] >= a[i+1].
     """
-    if not array:
-        return None
-    return _find_peak_1d(array, 0, len(array))
+    return _find_peak_1d(array, 0, len(array)) if array else None
 
 
 def _find_peak_1d(array: List[int], start: int, end: int) -> Optional[int]:

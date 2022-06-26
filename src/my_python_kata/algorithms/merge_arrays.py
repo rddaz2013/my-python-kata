@@ -19,18 +19,18 @@ def _merge_two_arrays(first: List[int], second: List[int]) -> List[int]:
     while i < len(first) and j < len(second):
         if first[i] <= second[j]:
             merged.append(first[i])
-            i = i + 1
+            i += 1
         else:
             merged.append(second[j])
-            j = j + 1
+            j += 1
 
     # Copy leftovers
     while i < len(first):
         merged.append(first[i])
-        i = i + 1
+        i += 1
 
     while j < len(second):
         merged.append(second[j])
-        j = j + 1
+        j += 1
 
     return merged
